@@ -1,7 +1,9 @@
+import PageLayout from "@/components/layout/PageLayout";
+
 export default function IndexPage() {
   return (
-    <div>
+    <PageLayout>
       <span>asd</span>
-    </div>
+    </PageLayout>
   );
 }
