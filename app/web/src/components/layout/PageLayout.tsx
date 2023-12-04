@@ -1,19 +1,20 @@
 import styled from "@emotion/styled";
-import Header from "@/components/Header";
+import AppBar from "@/components/AppBar";
 
-const Container = styled.div``;
+const Container = styled.div`
+  display: flex;
+`;
 
 const ChildrenContainer = styled.div``;
 
 interface PageLayoutProps {
   children: React.ReactNode;
-  hideHeader?: boolean;
 }
 
-export default function PageLayout({ children, hideHeader }: PageLayoutProps) {
+export default function PageLayout({ children }: PageLayoutProps) {
   return (
     <Container>
-      {!hideHeader && <Header />}
+      <AppBar />
       <ChildrenContainer>{children}</ChildrenContainer>
     </Container>
   );
